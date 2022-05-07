@@ -24,13 +24,13 @@ We provide tutorials to train the neural networks, RU-Net and WAC-Net from scrat
 3. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/3-training_WACNet_z_distance.ipynb) [3-training_WACNet_z_distance.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/3-training_WACNet_z_distance.ipynb) demonstrates the training process of WAC-Net for z-distance predictions.
 
 ### Usage examples
-We also provide additional examples in ```examples``` on how to use pre-trained networks on experimental images.
+We also provide additional examples in ```examples``` on how to apply pre-trained neural networks on experimental holographic images.
 
 1. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RUNet.ipynb) [1-example_RUNet.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RUNet.ipynb) demonstrates how to use RU-Net on experimental holographic images to extract properties.
 
 2. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/2-example_WACNet.ipynb) [2-example_WACNet.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/2-example_WACNet.ipynb) demonstrates how to use WAC-Net on experimental crops of planktons to obtain a refined dry mass value.
 
-3. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/3-example_Analysis.ipynb) [3-example_Analysis.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/3-example_Analysis.ipynb) demonstrates the complete analysis pipeling, i.e, using RU-Net and WAC-Net in sequence.
+3. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/3-example_Analysis.ipynb) [3-example_Analysis.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/3-example_Analysis.ipynb) demonstrates the complete analysis pipeline, i.e, using RU-Net and WAC-Net in sequence.
 
 
 ## Citation
