@@ -26,7 +26,7 @@ We provide tutorials to train the neural networks, RU-Net and WAC-Net from scrat
 3. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/3-training_WACNet_z_distance.ipynb) [3-training_WACNet_z_distance.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/3-training_WACNet_z_distance.ipynb) demonstrates the training process of WAC-Net for z-distance predictions.
 
 ### Usage examples
-We also provide additional examples in ```examples``` on how to apply pre-trained neural networks on experimental holographic images. Pdf versions of examples are included for quick viewing.
+We also provide additional examples in ```examples``` on how to apply pre-trained neural networks on experimental holographic images. PDF versions of examples are included for quick viewing.
 
 1. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RUNet.ipynb) [1-example_RUNet.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RUNet.ipynb) demonstrates how to use RU-Net on experimental holographic images to extract properties. The notebook can also be used to generate ```figure 1``` and ```figure 2``` in the paper.
 
