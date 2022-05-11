@@ -48,12 +48,11 @@ arXiv:2202.09046 (2022).
 
 See also [DeepTrack2.1](https://github.com/softmatterlab/DeepTrack-2.0/tree/master):
 
-<https://doi.org/10.1063/5.0034891>
-
 ```
 Benjamin Midtvedt, Saga Helgadottir, Aykut Argun, Jesús Pineda, Daniel Midtvedt, Giovanni Volpe.
 "Quantitative Digital Microscopy with Deep Learning."
 Applied Physics Reviews 8 (2021), 011310.
+https://doi.org/10.1063/5.0034891
 ```
 
 
