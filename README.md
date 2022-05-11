@@ -46,7 +46,7 @@ Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, and Gio
 arXiv:2202.09046 (2022).
 ```
 
-See also [DeepTrack2.1](https://github.com/softmatterlab/DeepTrack-2.0/tree/master)
+See also [DeepTrack2.1](https://github.com/softmatterlab/DeepTrack-2.0/tree/master):
 
 ```
 Benjamin Midtvedt, Saga Helgadottir, Aykut Argun, Jesús Pineda, Daniel Midtvedt, Giovanni Volpe.
