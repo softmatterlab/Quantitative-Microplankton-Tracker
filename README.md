@@ -5,7 +5,7 @@ By Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, and 
 
 Quantitiative microplankton tracker is a deep-learning based framework for predicting dry mass, and three-dimensional positions of microplankton species from experimental holographic images. 
 
-The repository contains source code for the arXiv preprint 2202.09046, [Microplankton life histories revealed by holographic microscopy and deep learning](https://arxiv.org/abs/2202.09046)
+The repository contains source code for the arXiv preprint, [Microplankton life histories revealed by holographic microscopy and deep learning](https://arxiv.org/abs/2202.09046)
 
 <p align="center">
   <img width="400" src=https://raw.githubusercontent.com/softmatterlab/Quantitative-Microplankton-Tracker/main/assets/setup.png>
