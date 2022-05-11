@@ -1,4 +1,5 @@
 # Quantitative-Microplankton-Tracker
+By Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, and Giovanni Volpe.
 [![arXiv](https://img.shields.io/badge/arXiv-2202.09046-b31b1b.svg)](https://arxiv.org/abs/2202.09046)
 
 Quantitiative microplankton tracker is a deep-learning based framework for predicting dry mass, and three-dimensional positions of microplankton species from experimental holographic images. 
