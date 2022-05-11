@@ -46,6 +46,15 @@ arXiv:2202.09046 (2022).
 
 <https://arxiv.org/abs/2202.09046>
 
+See also [DeepTrack2.1](https://github.com/softmatterlab/DeepTrack-2.0/tree/master)
+
+```
+Benjamin Midtvedt, Saga Helgadottir, Aykut Argun, Jesús Pineda, Daniel Midtvedt, Giovanni Volpe.
+"Quantitative Digital Microscopy with Deep Learning."
+Applied Physics Reviews 8 (2021), 011310.
+https://doi.org/10.1063/5.0034891
+```
+
 
 ## Funding
 This work was partly supported by the H2020 European Research Council (ERC) Starting Grant ComplexSwimmers (Grant No. 677511), the Horizon Europe ERC Consolidator Grant MAPEI (Grant No. 101001267), the Knut and Alice Wallenberg Foundation (Grant No. 2019.0079), and the Swedish Research Council (VR, Grant No. 2019-05238).
