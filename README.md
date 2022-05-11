@@ -45,3 +45,7 @@ arXiv:2202.09046 (2022).
 ```
 
 <https://arxiv.org/abs/2202.09046>
+
+
+## Funding
+This work was partly supported by the H2020 European Research Council (ERC) Starting Grant ComplexSwimmers (Grant No. 677511), the Horizon Europe ERC Consolidator Grant MAPEI (Grant No. 101001267), the Knut and Alice Wallenberg Foundation (Grant No. 2019.0079), and the Swedish Research Council (VR, Grant No. 2019-05238).
