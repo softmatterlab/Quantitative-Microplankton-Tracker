@@ -38,13 +38,13 @@ We also provide additional examples in ```examples``` on how to apply pre-traine
 ## Citation
 If you use this code for your research, please cite our paper:
 
+<https://arxiv.org/abs/2202.09046>
+
 ```
 Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, and Giovanni Volpe.
 "Microplankton life histories revealed by holographic microscopy and deep learning"
 arXiv:2202.09046 (2022).
 ```
-
-<https://arxiv.org/abs/2202.09046>
 
 See also [DeepTrack2.1](https://github.com/softmatterlab/DeepTrack-2.0/tree/master)
 
