@@ -626,3 +626,263 @@ class cgan(tf.keras.Model):
 
     def call(self, *args, **kwargs):
         return self.generator.call(*args, **kwargs)
+
+
+
+
+# Independent models (RU-Net and WAC-Net) for the paper "Microplankton life histories revealed by holographic microscopy and deep learning"
+
+# RU-Net
+
+def regressionUNet(
+    input_shape=(None, None, 1),
+    conv_layers_dimensions=(16, 32, 64, 128),
+    upsample_layers_dimensions=(16, 32, 64, 128),
+    base_conv_layers_dimensions=(128, 128),
+    output_conv_layers_dimensions=(16, 16),
+    dropout=(),
+    pooldim=2,
+    steps_per_pooling=1,
+    number_of_outputs=1,
+    output_activation=None,
+    loss="mae",
+    layer_function=None,
+    BatchNormalization=False,
+    **kwargs
+):
+    """Creates a Regression U-Net (RU-Net).
+
+    Parameters
+    ----------
+    input_shape : tuple of ints
+        Size of the images to be analyzed.
+    conv_layers_dimensions : tuple of ints
+        Number of convolutions in each convolutional layer during down-
+        and upsampling.
+    base_conv_layers_dimensions : tuple of ints
+        Number of convolutions in each convolutional layer at the base
+        of the unet, where the image is the most downsampled.
+    output_conv_layers_dimensions : tuple of ints
+        Number of convolutions in each convolutional layer after the
+        upsampling.
+    steps_per_pooling : int
+        Number of convolutional layers between each pooling and upsampling
+        step.
+    number_of_outputs : int
+        Number of convolutions in output layer.
+    output_activation : str or keras activation
+        The activation function of the output.
+    loss : str or keras loss function
+        The loss function of the network.
+    layer_function : Callable[int] -> keras layer
+        Function that returns a convolutional layer with convolutions
+        determined by the input argument. Can be use to futher customize the network.
+
+    Returns
+    -------
+    keras.models.Model
+        Deep learning network.
+    """
+
+    def conv_step(layer, dimensions):
+        layer = tf.keras.layers.Conv2D(
+            dimensions, kernel_size=1, activation="relu", padding="same"
+        )(layer)
+        layern = tf.keras.layers.Conv2D(
+            dimensions, kernel_size=3, activation="relu", padding="same"
+        )(layer)
+
+        layern = tf.keras.layers.Conv2D(
+            dimensions, kernel_size=3, activation="relu", padding="same"
+        )(layern)
+        layer = tf.keras.layers.Add()([layer, layern])
+        return layer
+
+    if layer_function is None:
+        layer_function = lambda dimensions: tf.keras.layers.Conv2D(
+            conv_layer_dimension,
+            kernel_size=3,
+            activation="relu",
+            padding="same",
+        )
+
+    unet_input = tf.keras.layers.Input(input_shape)
+
+    concat_layers = []
+
+    layer = unet_input
+
+    # Downsampling step
+    for conv_layer_dimension in conv_layers_dimensions:
+        for _ in range(steps_per_pooling):
+            layer = layer_function(conv_layer_dimension)(layer)
+        concat_layers.append(layer)
+        if BatchNormalization:
+            layer = tf.keras.layers.BatchNormalization()(layer)
+        if dropout:
+            layer = tf.keras.layers.SpatialDropout2D(dropout[0])(layer)
+            dropout = dropout[1:]
+
+        layer = tf.keras.layers.MaxPooling2D(pooldim)(layer)
+
+    # Base steps
+    for conv_layer_dimension in base_conv_layers_dimensions:
+        layer = layer_function(conv_layer_dimension)(layer)
+
+    # Upsampling step
+    regressionLayer = layer
+    for conv_layer_dimension, concat_layer in zip(
+        reversed(upsample_layers_dimensions), reversed(concat_layers)
+    ):
+
+        layer = tf.keras.layers.Conv2DTranspose(
+            conv_layer_dimension, kernel_size=pooldim, strides=pooldim
+        )(layer)
+        regressionLayer = tf.keras.layers.Conv2DTranspose(
+            conv_layer_dimension, kernel_size=pooldim, strides=pooldim
+        )(regressionLayer)
+
+        layer = tf.keras.layers.Concatenate(axis=-1)([layer, concat_layer])
+        regressionLayer = tf.keras.layers.Concatenate(axis=-1)(
+            [regressionLayer, concat_layer]
+        )
+        for _ in range(steps_per_pooling):
+            layer = layer_function(conv_layer_dimension)(layer)
+            regressionLayer = layer_function(conv_layer_dimension)(
+                regressionLayer
+            )
+
+    # Output step
+    for conv_layer_dimension in output_conv_layers_dimensions:
+        layer = layer_function(conv_layer_dimension)(layer)
+        regressionLayer = layer_function(conv_layer_dimension)(regressionLayer)
+    layer = tf.keras.layers.Conv2D(
+        1,
+        kernel_size=3,
+        activation="sigmoid",
+        padding="same",
+        name="segmentationOutput",
+    )(layer)
+
+    regressionLayer = tf.keras.layers.Concatenate(axis=-1)(
+        [regressionLayer, layer]
+    )
+    regressionLayer = tf.keras.layers.Conv2D(
+        number_of_outputs,
+        kernel_size=3,
+        activation=output_activation,
+        padding="same",
+        name="regressionOutput",
+    )(regressionLayer)
+    outputLayer = tf.keras.layers.Concatenate(axis=-1)(
+        [layer, regressionLayer]
+    )
+    model = models.Model(inputs=unet_input, outputs=outputLayer)
+
+    return model
+
+
+# Custom loss function for RU-Net
+
+def unet_features(weight=(10, 1, 0.1), num_features=1):
+    def get_loss(y_true, y_pred):
+        T = K.flatten(y_true[:, :, :, 0])
+        P = K.flatten(y_pred[:, :, :, 0])
+
+        loss = -K.mean(
+            weight[0] * T * K.log(P + 1e-4)
+            + weight[1] * (1 - T) * K.log(1 - P + 1e-4)
+        ) / (
+            weight[0] + weight[1]
+        )
+        for i in range(num_features):
+
+            T1 = K.flatten(y_true[:, :, :, i + 1])
+            P1 = K.flatten(y_pred[:, :, :, i + 1])
+            error = K.abs(T1 - P1)
+            f_loss = K.sum(T * error) / (K.sum(T) + 1e-6) + K.sum(
+                error * (1 - T)
+            ) / (K.sum(1 - T) + 1e-6)
+            loss += weight[2] * f_loss
+
+        return loss
+
+    return get_loss
+
+# WAC-Net
+
+from tensorflow import keras
+def WACNet(outputs=2):
+
+    """
+    Creates a weighted average convolutional neural network (WAC-Net).
+
+    Parameters
+    ----------
+    outputs : int
+        Number of outputs.
+        = 2 for dry mass and radius prediction
+        = 1 for z-distance (axial distance) prediction 
+    """
+
+    Sequential = keras.models.Sequential
+    Model = keras.models.Model
+    Dense = keras.layers.Dense
+    Conv = keras.layers.Conv2D
+    Conv1D = keras.layers.Conv1D
+    ConvL = keras.layers.LocallyConnected2D
+    Pool = keras.layers.MaxPooling2D
+    Input = keras.layers.Input
+    Concat = keras.layers.Concatenate
+    TimeDistributed = keras.layers.TimeDistributed
+    Flatten = keras.layers.Flatten
+    Lambda = keras.layers.Lambda
+    K = keras.backend
+
+    model = Sequential()
+    model.add(
+        (
+            Conv(
+                32,
+                kernel_size=3,
+                strides=1,
+                activation="relu",
+                input_shape=(64, 64, 1),
+            )
+        )
+    )
+    model.add(Pool(2))
+    model.add((Conv(64, kernel_size=3, strides=1, activation="relu")))
+    model.add(Pool(2))
+    model.add((Conv(128, kernel_size=3, strides=1, activation="relu")))
+    model.add(Pool(2))
+    model.add((Conv(256, kernel_size=3, strides=1, activation="relu")))
+    model.add((Flatten()))
+    model.add((Dense(128, activation="relu")))
+    model.add((Dense(128, activation="relu")))
+
+    stack = Input(model.input_shape)
+    vectors = TimeDistributed(model)(
+        stack
+    )  # time distributed applies a layer to every temporal slice of the input
+    weights = Conv1D(128, 1, padding="same")(vectors)
+    weights = Conv1D(128, 1, padding="same")(weights)
+    weights = Conv1D(1, 1, padding="same")(weights)
+
+    def merge_function(tensors):
+        x = tensors[0]
+        weights = tensors[1]
+        weights = K.softmax(weights, axis=1)
+        merged = K.sum(x * weights, axis=1)
+        return merged
+
+    merge_layer = Lambda(merge_function)
+
+    merged = merge_layer([vectors, weights])
+
+    merged = Dense(32, activation="relu")(merged)
+    merged = Dense(32, activation="relu")(merged)
+    out = Dense(outputs)(merged)
+    model = Model(stack, out)
+
+    return model
