@@ -34,7 +34,9 @@ The code for generating the figures can be found in [2-example_WAC-Net.ipynb](ht
 
 ### Double division event
 
-  - Cell1_sequence.npy: Image sequence of Parent cell, Gen 1 Daugher cell 1, and Gen 2 Daughter cell 1
+  - Cell1_sequence.npy: Image sequence of Parent cell, Gen 1 Daugher cell 1, and Gen 2 Daughter cell 1 (**Figure. 4d**)
   - Cell2_sequence.npy: Image sequence of Gen 1 Daughter cell 2 (along with the Parent cell)
   - Cell3_sequence.npy: Image sequence of Gen 2 Daughter cell 2 (along with the Parent cell and Gen 1 Daugher cell 1)
-  - Correlation_data: Contains the dry masses for parent cells and daughter cells in the division event (**Figure. 4**)
+  - Correlation_data: Contains the dry masses for parent cells and daughter cells in the division event (**Figure. 4g**)
+
+The code for generating the figures can be found in [2-example_WAC-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/2-example_WAC-Net.ipynb)
