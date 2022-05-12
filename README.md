@@ -12,12 +12,12 @@ This repository contains source code and data for the arXiv preprint, [Microplan
 </p>
 
 ## Description
-The quantitative microplankton tracker uses two neural network in sequence to predict the dry masses and 3D positions of the microplanktons in holographic images. The first neural network, ```Regression U-Net (RU-Net)```, segments single plankton holograms from a large field-of-view holographic image and predicts the dry masses and vertical positions. The second neural network, ```Weighted Average Convolutional Neural network (WAC-Net)```, is then applied to the cropped image sequences of planktons to refine the plankton dry masses and vertical positions predicted by ```RU-Net```.
+The quantitative microplankton tracker uses two neural network in sequence to predict the dry masses and 3D positions of the microplanktons in holographic images. The first neural network, **Regression U-Net (RU-Net)**, segments single plankton holograms from a large field-of-view holographic image and predicts the dry masses and vertical positions. The second neural network, **Weighted Average Convolutional Neural network (WAC-Net)**, is then applied to the cropped image sequences of planktons to refine the plankton dry masses and vertical positions predicted by **RU-Net**.
 
 
 ## Usage
 ### Training-tutorials
-We provide tutorials to train the neural networks, ```RU-Net```, and, ```WAC-Net```, from scratch in [training-tutorials](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/tree/main/training-tutorials).
+We provide tutorials to train the neural networks, **RU-Net**, and, **WAC-Net**, from scratch in [training-tutorials](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/tree/main/training-tutorials).
 
 1. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RUNet.ipynb) [1-training_RUNet.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RUNet.ipynb) explains how to train RU-Net.
 
