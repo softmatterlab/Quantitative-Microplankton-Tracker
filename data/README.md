@@ -19,7 +19,7 @@ The code for generating the figures can be found in [1-example_RU-Net.ipynb](htt
 
 ## data_figure3
 
-Feeding event
+### Feeding event
 
   - predator_sequence.npy: Predator image sequence in the feeding event (**Figure. 3**)
   - prey_sequence.npy: Prey image sequence in the feeding event (**Figure. 3**)
@@ -32,7 +32,7 @@ The code for generating the figures can be found in [2-example_WAC-Net.ipynb](ht
 
 ## data_figure4
 
-Double division event
+### Double division event
 
   - Cell1_sequence.npy: Parent cell image sequence in the divsion event (**Figure. 4**). Also contains 
   - Cell2_sequence.npy:
