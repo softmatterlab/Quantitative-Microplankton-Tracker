@@ -6,23 +6,26 @@ The data files are stored in numpy array format.
 
 ## data_figure1
 
-  - fig1_data.npy: Contains an example holograhic image of planktons. The data is used to generate **Figure. 1a**, and **Figure. 1b** in the paper. 
+  - fig1_data.npy: Example holograhic image of planktons. The data is used to generate **Figure. 1a**, and **Figure. 1b** in the paper. 
   
   The code for generating the figures can be found in [1-example_RU-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RU-Net.ipynb).
 
 ## data_figure2
 
-  - Oxyrrhis_data.npy: Contains a 50-frame image sequence of *Oxyrrhis marina*. The data is used to generate **Figure. 2a** in the paper.
-  - Correlation_data: Contains the dry mass and radius correlation data for various plankton species. The data is used is used to generate **Figure. 2b** and **Figure. 2c** in the paper.
+  - Oxyrrhis_data.npy: A 50-frame image sequence of *Oxyrrhis marina*. The data is used to generate **Figure. 2a** in the paper.
+  - Correlation_data: Contains the predicted dry masses and radii for different plankton species. The data is used is used to generate **Figure. 2b** and **Figure. 2c** in the paper.
 
   The code for generating the figures can be found in [1-example_RU-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RU-Net.ipynb).
 
 ## data_figure3
 
-  - predator_sequence.npy:
-  - prey_sequence.npy:
-  - predator_2d_coords.npy:
-  - prey_2d_coords.npy:
+  - predator_sequence.npy: A sequence of 64 x 64 px images of the predator in the feeding event (**Figure. 3**)
+  - prey_sequence.npy: Prey image sequence of the feeding event (**Figure. 3**)
+
+  The code for generating the feeding event figure can be found in [2-example_WAC-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/2-example_WAC-Net.ipynb)
+
+  - predator_2d_coords.npy: In-plane (2D) coordinates of predator in the feeding event
+  - prey_2d_coords.npy: In-plane (2D) coordinates of prey
   - Correlation_data:
 
 ## data_figure4
