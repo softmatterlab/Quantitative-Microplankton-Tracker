@@ -2,7 +2,7 @@
 
 This folder contains experimental data for the arXiv preprint, [Microplankton life histories revealed by holographic microscopy and deep learning](https://arxiv.org/abs/2202.09046)
 
-All the data files are in numpy array format unless otherwise stated.
+The data files are stored in numpy array format. 
 
 ## data_figure1
 
