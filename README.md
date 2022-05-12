@@ -12,7 +12,7 @@ This repository contains source code and data for the arXiv preprint, [Microplan
 </p>
 
 ## Description
-Quantitative microplankton tracker uses two neural network architectures (RU-Net and WAC-Net) in sequence to predict the dry mass, and 3D positions of the microplanktons. The first neural network, ```Regression U-Net (RU-Net)``` segments single plankton holograms from a large field-of-view holographic image, along with their dry mass and z-distance properties. The predictions are then refined by an additional neural network, ```Weighted average convolutional neural network (WAC-Net)``` applied to the cropped image sequences that detail individual plankton.
+The quantitative microplankton tracker uses two neural network (RU-Net and WAC-Net) in sequence to predict the dry masses, and 3D positions of the microplanktons in holographic images. The first neural network, ```Regression U-Net (RU-Net)``` segments single plankton holograms from a large field-of-view holographic image, along with their dry mass and z-distance properties. The predictions are then refined by an additional neural network, ```Weighted average convolutional neural network (WAC-Net)``` applied to the cropped image sequences that detail individual plankton.
 
 
 ## Usage
