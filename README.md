@@ -17,9 +17,9 @@ The quantitative microplankton tracker uses two neural network in sequence to pr
 
 ## Usage
 ### Training-tutorials
-We provide tutorials to train the neural networks, ```RU-Net```, and, ```WAC-Net```, from scratch in ```training-tutorials```.
+We provide tutorials to train the neural networks, ```RU-Net```, and, ```WAC-Net```, from scratch in [training-tutorials](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/tree/main/training-tutorials).
 
-1. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RUNet.ipynb) [1-training_RUNet.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RUNet.ipynb) explains how to train RU-Net from scratch.
+1. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RUNet.ipynb) [1-training_RUNet.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RUNet.ipynb) explains how to train RU-Net.
 
 2. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/2-training_WACNet_drymass.ipynb) [2-training_WACNet_drymass.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/2-training_WACNet_drymass.ipynb) demonstrates the training process of WAC-Net for dry mass predictions.
 
