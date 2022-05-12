@@ -6,7 +6,7 @@ All the data files are stored in numpy array format.
 
 ## data_figure1
 
-  - fig1_data.npy: Example holograhic image of planktons. The data is used to generate **Figure. 1a**, and **Figure. 1b** in the paper 
+  - *fig1_data.npy*: Example holograhic image of planktons. The data is used to generate **Figure. 1a**, and **Figure. 1b** in the paper 
   
 The code for generating the figures can be found in [1-example_RU-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RU-Net.ipynb).
 
