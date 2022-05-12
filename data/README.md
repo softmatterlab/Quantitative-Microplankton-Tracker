@@ -6,13 +6,13 @@ All the data files are stored in numpy array format.
 
 ## data_figure1
 
-  - *fig1_data.npy*: Example holograhic image of planktons. The data is used to generate **Figure. 1a**, and **Figure. 1b** in the paper 
+  - **fig1_data.npy**: Example holograhic image of planktons. The data is used to generate **Figure. 1a**, and **Figure. 1b** in the paper 
   
 The code for generating the figures can be found in [1-example_RU-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RU-Net.ipynb).
 
 ## data_figure2
 
-  - Oxyrrhis_data.npy: A 50-frame image sequence of *Oxyrrhis marina*. The data is used to generate **Figure. 2a** in the paper
+  - *Oxyrrhis_data.npy*: A 50-frame image sequence of *Oxyrrhis marina*. The data is used to generate **Figure. 2a** in the paper
   - Correlation_data: Contains the dry masses and radii of different plankton species. The data is used to generate **Figure. 2b** and **Figure. 2c** in the paper
 
 The code for generating the figures can be found in [1-example_RU-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RU-Net.ipynb).
