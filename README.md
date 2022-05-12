@@ -17,7 +17,7 @@ The quantitative microplankton tracker uses two neural network in sequence to pr
 
 ## Usage
 ### Training-tutorials
-We provide tutorials to train the neural networks, RU-Net and WAC-Net from scratch in ```training-tutorials```.
+We provide tutorials to train the neural networks, ```RU-Net```, and, ```WAC-Net```, from scratch in ```training-tutorials```.
 
 1. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RUNet.ipynb) [1-training_RUNet.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RUNet.ipynb) explains how to train RU-Net from scratch.
 
