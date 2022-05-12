@@ -25,7 +25,7 @@ The code for generating the figures can be found in [1-example_RU-Net.ipynb](htt
   - prey_sequence.npy: Prey image sequence in the feeding event (**Figure. 3**)
   - predator_2d_coords.npy: In-plane (2D) coordinates of predator
   - prey_2d_coords.npy: In-plane (2D) coordinates of prey
-  - Correlation_data: Contains the dry mass data of prey and predators in feeding event (**Figure. 3e**).
+  - Correlation_data: Contains the dry masses of prey and predators in feeding event (**Figure. 3e**).
 
 The code for generating the figures can be found in [2-example_WAC-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/2-example_WAC-Net.ipynb)
 
@@ -34,7 +34,7 @@ The code for generating the figures can be found in [2-example_WAC-Net.ipynb](ht
 
 ### Double division event
 
-  - Cell1_sequence.npy: Parent cell image sequence in the divsion event (**Figure. 4**). Also contains 
-  - Cell2_sequence.npy:
-  - Cell3_sequence.npy:
-  - Correlation_data:
+  - Cell1_sequence.npy: Image sequence of Parent cell, Gen 1 Daugher cell 1, and Gen 2 Daughter cell 1
+  - Cell2_sequence.npy: Image sequence of Gen 1 Daughter cell 2 (along with the Parent cell)
+  - Cell3_sequence.npy: Image sequence of Gen 2 Daughter cell 2 (along with the Parent cell and Gen 1 Daugher cell 1)
+  - Correlation_data: Contains the dry masses for parent cells and daughter cells in the division event (**Figure. 4**)
