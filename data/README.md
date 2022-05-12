@@ -5,7 +5,7 @@ This folder contains experimental data for the arXiv preprint, [Microplankton li
 ## data_figure1
 
 Contains:
-  - Experimental image shown in **Figure. 1a**, and **Figure. 1b** in the paper.
+  - **fig1_data.npy**: Experimental image shown in **Figure. 1a**, and **Figure. 1b** in the paper.
 
 ## data_figure2
 
