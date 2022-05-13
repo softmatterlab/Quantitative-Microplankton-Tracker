@@ -17,7 +17,7 @@ The quantitative microplankton tracker uses two neural network in sequence to pr
 
 ## Usage
 ### Training-tutorials
-We provide tutorials to train the neural networks, **RU-Net**, and, **WAC-Net**, from scratch in [training-tutorials](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/tree/main/training-tutorials). PDF versions of training-tutorials are also included for quick viewing.
+We provide tutorials to train the neural networks, **RU-Net**, and, **WAC-Net**, from scratch in [training-tutorials](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/tree/main/training-tutorials). PDF versions of **training-tutorials** are included for quick viewing.
 
 1. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RU-Net.ipynb) [1-training_RU-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/1-training_RU-Net.ipynb) demonstrates the training process of **RU-Net**.
 
@@ -26,7 +26,7 @@ We provide tutorials to train the neural networks, **RU-Net**, and, **WAC-Net**,
 3. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/3-training_WAC-Net_vertical_positions.ipynb) [3-training_WAC-Net_vertical_positions.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/training-tutorials/3-training_WAC-Net_vertical_positions.ipynb) demonstrates the training process of **WAC-Net** to predict plankton vertical positions.
 
 ### Usage examples
-We also provide additional examples in [examples](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/tree/main/examples) on how to apply pre-trained neural networks on experimental holographic images. PDF versions of examples are also included for quick viewing.
+We also provide additional examples in [examples](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/tree/main/examples) on how to apply pre-trained neural networks on experimental holographic images. PDF versions of **examples** are included for quick viewing.
 
 1. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RU-Net.ipynb) [1-example_RU-Net.ipynb](https://github.com/softmatterlab/Quantitative-Microplankton-Tracker/blob/main/examples/1-example_RU-Net.ipynb) demonstrates how to use **RU-Net** on experimental holographic images. The notebook also generates **figure 1** and **figure 2** of the paper.
 
