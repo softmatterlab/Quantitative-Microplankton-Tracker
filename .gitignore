@@ -5,3 +5,6 @@
 
 # Other files #
 .vscode
+
+# cache files
+*.pyc
