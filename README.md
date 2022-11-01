@@ -40,7 +40,8 @@ If you use this code for your research, please cite our paper:
 <https://elifesciences.org/articles/79760>
 
 ```
-Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, Giovanni Volpe (2022)."Microplankton life histories revealed by holographic microscopy and deep learning." 
+Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, Giovanni Volpe (2022).
+"Microplankton life histories revealed by holographic microscopy and deep learning." 
 eLife 11:e79760.
 https://doi.org/10.7554/eLife.79760
 ```
