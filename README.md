@@ -37,7 +37,7 @@ We also provide additional examples in [examples](https://github.com/softmatterl
 ## Citation
 If you use this code for your research, please cite our paper:
 
-<https://elifesciences.org/articles/79760>
+<a href="https://elifesciences.org/articles/79760" target="_blank">
 
 ```
 Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, Giovanni Volpe (2022).
