@@ -1,11 +1,10 @@
 # Quantitative-Microplankton-Tracker
-[![arXiv](https://img.shields.io/badge/arXiv-2202.09046-b31b1b.svg)](https://arxiv.org/abs/2202.09046)
 
 By Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, and Giovanni Volpe.
 
 The quantitiative microplankton tracker is a deep-learning based framework to predict dry masses and three-dimensional positions of microplankton from experimental holographic images. 
 
-This repository contains source code and data for the arXiv preprint, [Microplankton life histories revealed by holographic microscopy and deep learning](https://arxiv.org/abs/2202.09046)
+This repository contains source code and data for the article, [Microplankton life histories revealed by holographic microscopy and deep learning](https://elifesciences.org/articles/79760)
 
 <p align="center">
   <img width="400" src=https://raw.githubusercontent.com/softmatterlab/Quantitative-Microplankton-Tracker/main/assets/setup.png>
@@ -41,9 +40,11 @@ If you use this code for your research, please cite our paper:
 <https://arxiv.org/abs/2202.09046>
 
 ```
-Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, and Giovanni Volpe.
-"Microplankton life histories revealed by holographic microscopy and deep learning"
-arXiv:2202.09046 (2022).
+Harshith Bachimanchi, Benjamin Midtvedt, Daniel Midtvedt, Erik Selander, Giovanni Volpe (2022) **Microplankton life histories revealed by holographic microscopy and deep learning** 
+eLife 11:e79760.
+
+https://doi.org/10.7554/eLife.79760
+
 ```
 
 See also [DeepTrack2.1](https://github.com/softmatterlab/DeepTrack-2.0/tree/master):
@@ -52,6 +53,7 @@ See also [DeepTrack2.1](https://github.com/softmatterlab/DeepTrack-2.0/tree/mast
 Benjamin Midtvedt, Saga Helgadottir, Aykut Argun, Jesús Pineda, Daniel Midtvedt, Giovanni Volpe.
 "Quantitative Digital Microscopy with Deep Learning."
 Applied Physics Reviews 8 (2021), 011310.
+
 https://doi.org/10.1063/5.0034891
 ```
 
